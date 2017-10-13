@@ -4,6 +4,11 @@ import { Component } from '@angular/core';
   selector: 'my-app',
   template: `
     <h1>Guess The Word</h1>
+    <p>{{solution}}</p>
   `
 })
-export class AppComponent { }
+export class AppComponent {
+
+  solution = 'LOUISIANA';
+  selection = '';
+}
