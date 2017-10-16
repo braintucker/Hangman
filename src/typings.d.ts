@@ -2,4 +2,9 @@ declare var app: {
   environment: string;
 };
 
-declare function require(id: string): any;
+interface WebpackRequire {
+  (id: string): any;
+  context(dir: string, useSubdirs: boolean, pattern: RegExp): any;
+}
+
+declare var require: WebpackRequire;
