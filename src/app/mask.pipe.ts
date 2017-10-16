@@ -1,6 +1,9 @@
-class MaskPipe {
+import { Pipe, PipeTransform } from '@angular/core';
 
-  transform(value, selection) {
+@Pipe({name: 'mask'})
+export class MaskPipe implements PipeTransform {
+
+  transform(value: string, selection: string) {
 
     let masked = '';
     for(let i=0; i < value.length; i++){

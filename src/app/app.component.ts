@@ -4,7 +4,7 @@ import { Component } from '@angular/core';
   selector: 'my-app',
   template: `
     <h1>Guess The Word</h1>
-    <p>{{solution}}</p>
+    <p>{{solution | mask:selection}}</p>
   `
 })
 export class AppComponent {
