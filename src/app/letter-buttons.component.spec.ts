@@ -12,8 +12,10 @@ describe('LetterButtonsComponent', () => {
 
   fit('should display a button for each letter of the alphabet', () => {
     const fixture = TestBed.createComponent(LetterButtonsComponent);
+    fixture.autoDetectChanges();
     const component = fixture.componentInstance;
-    console.log('component', component);
+    const element = fixture.nativeElement;
+    console.log('element', element);
   });
 
 });

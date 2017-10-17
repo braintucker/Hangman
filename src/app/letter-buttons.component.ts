@@ -4,8 +4,8 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
   selector: 'letter-buttons',
   template: `
     <button *ngFor="let letter of alphabet"
-    (click)="select(letter)"
-    [disabled]="selection.includes(letter)">{{letter}}</button>
+      (click)="select(letter)"
+      [disabled]="selection.includes(letter)">{{letter}}</button>
   `
 })
 
