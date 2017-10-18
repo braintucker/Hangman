@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { WordService } from './word.service';
 
 @Component({
   selector: 'my-app',
@@ -12,5 +13,10 @@ export class AppComponent {
 
   solution = 'LOUISIANA';
   selection = '';
+
+  constructor(private wordService: WordService){
+    this.wordService.getWords()
+      .then(words => console.info(words));
+  }
 
 }

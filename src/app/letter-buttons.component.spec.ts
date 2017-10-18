@@ -46,7 +46,6 @@ describe('LetterButtonsComponent', () => {
 
     console.log('selection:', component.selection);
 
-
   });
 
 });

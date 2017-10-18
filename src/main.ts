@@ -1,6 +1,8 @@
 import 'core-js';
+import 'rxjs/add/operator/toPromise';
 import 'reflect-metadata';
 import 'zone.js/dist/zone';
+
 
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
