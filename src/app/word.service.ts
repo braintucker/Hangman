@@ -11,7 +11,15 @@ export class WordService {
   getWords() {
     return this.http.get(`${this.baseUrl}/words.json`)
       .toPromise()
-      .then(response => response.json());
+      .then(response => this.convert(response.json()));
+  }
+
+  private convert(parsedResponse) {
+    return Object.keys(parsedResponse)
+      .map(id => ({
+        id: id,
+        word: parsedResponse[id].word
+      }))
   }
 
 }
