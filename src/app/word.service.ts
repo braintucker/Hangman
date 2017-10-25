@@ -18,7 +18,7 @@ export class WordService {
     return Object.keys(parsedResponse)
       .map(id => ({
         id: id,
-        word: parsedResponse[id].word
+        wordName: parsedResponse[id].wordName
       }))
   }
 

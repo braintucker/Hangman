@@ -2,11 +2,11 @@ import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'word-list',
-  template: `    
+  template: `
     <div class="panel panel-default">
       <table class="table table-striped">
         <tr *ngFor="let word of words">
-          <td>{{word.word}}</td>
+          <td>{{word.wordName}}</td>
         </tr>
       </table>
     </div>

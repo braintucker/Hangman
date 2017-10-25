@@ -8,7 +8,7 @@ import { WordService } from './word.service';
     <p>{{solution | mask:selection}}</p>
     <letter-buttons [(selection)]="selection"></letter-buttons>
     <word-list [words]="words"></word-list>
-    <word-edit></word-edit>
+    <word-edit (submit)="submit($event)"></word-edit>
   `
 })
 export class AppComponent {
@@ -23,4 +23,7 @@ export class AppComponent {
       .then(words => this.words = words);
   }
 
+  submit(word) {
+    console.info('should submit', word);
+  }
 }
