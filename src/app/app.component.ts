@@ -7,13 +7,7 @@ import { WordService } from './word.service';
     <h1>Guess The Word</h1>
     <p>{{solution | mask:selection}}</p>
     <letter-buttons [(selection)]="selection"></letter-buttons>
-    <div class="panel panel-default">
-      <table class="table table-striped">
-        <tr *ngFor="let word of words">
-          <td>{{word.word}}</td>
-        </tr>
-      </table>
-    </div>
+    <word-list [words]="words"></word-list>    
   `
 })
 export class AppComponent {
