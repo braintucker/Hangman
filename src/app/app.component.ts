@@ -7,7 +7,8 @@ import { WordService } from './word.service';
     <h1>Guess The Word</h1>
     <p>{{solution | mask:selection}}</p>
     <letter-buttons [(selection)]="selection"></letter-buttons>
-    <word-list [words]="words"></word-list>    
+    <word-edit></word-edit>
+    <word-list [words]="words"></word-list>
   `
 })
 export class AppComponent {
